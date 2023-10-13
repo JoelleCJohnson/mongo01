@@ -43,7 +43,7 @@ const car4 = {
  }
 //add car to db
 export async function addACar(){
-    const carAdded = await carDb.insertOne(car5);
+    const carAdded = await carDb.insertOne(car4);
     console.log('Car added:', carAdded);
 }
 
