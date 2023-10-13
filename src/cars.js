@@ -27,9 +27,23 @@ const car3 = {
     awd: false,
 }
 
+const car4 = {
+    make: 'Toyota',
+    model:'Prius',
+    year: '2008',
+    color: 'silver',
+    awd: false,
+}
+ const car5 = {
+    make: 'Ford',
+    model: 'Focus',
+    year: '2020',
+    color: 'yellow',
+    awd: true,
+ }
 //add car to db
 export async function addACar(){
-    const carAdded = await carDb.insertOne(car1);
+    const carAdded = await carDb.insertOne(car5);
     console.log('Car added:', carAdded);
 }
 
@@ -40,9 +54,8 @@ export async function getAllCars(){
 }
 
 //delete a car from the database
-
 export async function deleteACarByModel(){
-    const deleteCarByModel = await carDb.findOneAndDelete({ model: 'Rouge' });
+    const deleteCarByModel = await carDb.findOneAndDelete({ model: 'Prius' });
     console.log("Deleted car:", deleteCarByModel);
 }
 
